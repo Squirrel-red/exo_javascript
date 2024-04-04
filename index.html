@@ -19,6 +19,25 @@
         </li>
     </ul>
 
+<!--Atteindre des éléments du DOM (Document Object Model)-->
+<!-- pour pointer la première ul sur la page-->
+<script>
+    let list = document.querySelector("ul")
+    // si on souhaite récupérer tous les éléments 
+    let listElements = list.querySelectorAll("li")
+
+    // pour modifier des éléments du DOM (la propriété style de chaque élément 
+    // en effectuant un boucle forEach( sur  la NodeList))
+    listElements.forEach(function(element){
+        // pour consulter les propriétés d'un élément du DOM on utilise la commande coonsole.dir()
+        console.dir(element)
+        element.style.color = "red"
+    })
+
+    // pour afficher les éléments récupérés par les méthodes utilisées précédement
+    console.log("la liste", list)
+    console.log("les éléments", listElements)
+</script>
     <script src="js/main.js"></script>
 </body>
 </html>
